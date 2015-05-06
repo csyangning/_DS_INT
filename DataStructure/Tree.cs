@@ -6,7 +6,7 @@ void Search(Node root)
 	{
 		return;
 	}
-	
+
 	root.visited == true;
 	foreach(Node n in root.adjacent)
 	{
@@ -25,7 +25,7 @@ void search (Node root)
 	root.visited = true;
 	visit(root);
 	queue.Enqueue(root);
-	
+
 	while(!queue.IsEmpty)
 	{
 		Node r = queue.Dequeue();
@@ -39,5 +39,22 @@ void search (Node root)
 			}
 		}
 	}
-	
+
+}
+
+
+// In order Travel
+pulic void InOrderTravel(Node root)
+{
+		if(root.Left != null)
+		{
+				InOrderTravel(root.Left);
+		}
+
+		visit(root);
+
+		if(root.Right != null)
+		{
+			InOrderTravel(root.Right);
+		}	
 }
