@@ -41,5 +41,3 @@ void search (Node root)
 	}
 	
 }
-
-
