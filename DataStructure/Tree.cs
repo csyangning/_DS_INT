@@ -44,6 +44,7 @@ void search (Node root)
 
 
 // In order Travel
+// More: http://en.wikipedia.org/wiki/Tree_traversal
 pulic void InOrderTravel(Node root)
 {
 		if(root.Left != null)
@@ -56,5 +57,5 @@ pulic void InOrderTravel(Node root)
 		if(root.Right != null)
 		{
 			InOrderTravel(root.Right);
-		}	
+		}
 }
