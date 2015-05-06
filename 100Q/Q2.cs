@@ -1,3 +1,5 @@
+//2. Convert a binary search tree to a sorted double-linked list. We can only change the target of pointers, but cannot create any new nodes.
+
     internal class BinaryTreeNode
     {
         public int value;

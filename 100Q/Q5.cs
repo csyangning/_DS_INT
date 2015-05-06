@@ -1,3 +1,7 @@
+// 5. Binary Search Tree Verification
+
+// Question: How to verify whether a binary tree is a binary search tree?
+
 internal class BinaryTreeNode
 {
     public int value;
