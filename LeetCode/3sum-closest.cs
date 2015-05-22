@@ -7,10 +7,41 @@
 // 
 //     The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
-public class Solution {
-    public int ThreeSumClosest(int[] nums, int target) {
-        Array.Sort(nums);
-		
-		
-    }
-}
+  public class Solution
+  {
+      public int ThreeSumClosest(int[] nums, int target)
+      {
+          Array.Sort(nums);
+          int closestSum = int.MaxValue;
+
+          for (int i = 0; i < nums.Length - 2; i++)
+          {
+              int low = i + 1;
+              int hi = nums.Length - 1;
+
+              while (low < hi)
+              {
+                  int currentSum = nums[i] + nums[low] + nums[hi];
+                  if (Math.Abs((long)currentSum - (long)target) < Math.Abs((long)closestSum - (long)target))
+                  {
+                      closestSum = currentSum;
+                  }
+
+                  if (currentSum < target)
+                  {
+                      low++;
+                  }
+                  else if (currentSum > target)
+                  {
+                      hi--;
+                  }
+                  else
+                  {
+                      return closestSum;
+                  }
+              }
+          }
+
+          return closestSum;
+      }
+  }
