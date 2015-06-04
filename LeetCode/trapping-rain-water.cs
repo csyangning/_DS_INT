@@ -18,7 +18,7 @@ public class Solution {
 			if(height[left] <= height[right])
 			{
 				if(height[left] >= maxLeft) maxLeft = height[left];
-				else result += maxLeft - height[left]
+				else result += maxLeft - height[left];
 				left++;
 			}
 			else
